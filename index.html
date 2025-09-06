@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArthurDex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- DASHBOARD 1: INTRO -->
+    <section id="introScreen" class="center-screen">
+      <h1 id="brand">ArthurDex</h1>
+      <div id="introLine" class="intro-line"></div>
+      <div id="powered" class="powered hidden">POWERED BY HEDERA</div>
+    </section>
+
+    <!-- DASHBOARD 2: TERMS -->
+    <section id="termsScreen" class="panel hidden">
+      <h2>Terms &amp; Conditions</h2>
+      <p class="muted">
+        By creating/using a wallet you accept responsibility for securing your passphrase.
+        ArthurDex is non-custodial and cannot recover lost funds. Proceed carefully.
+      </p>
+      <div class="btn-row">
+        <button id="acceptTerms" class="cta">I Agree — Continue</button>
+      </div>
+    </section>
+
+    <!-- DASHBOARD 3: WALLET OPTIONS -->
+    <section id="walletOptions" class="panel hidden">
+      <header class="panel-header">
+        <h2>ArthurDex</h2>
+        <div id="accountInfo" class="muted">Not connected</div>
+      </header>
+      <div class="panel-body">
+        <h3>Choose how to start</h3>
+        <div class="btn-row">
+          <button id="btnConnectHashpack" class="cta">🔗 Connect HashPack</button>
+          <button id="btnGeneratePass" class="cta">📝 Generate My Own Passphrase</button>
+          <button id="btnQuiz" class="cta">❓ Quiz & Create Wallet</button>
+        </div>
+        <div id="flowContainer" class="panel-flow"></div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD 4: MAIN DASHBOARD -->
+    <div id="mainDashboard" class="hidden">
+  <h2>Main Dashboard</h2>
+  <p id="accountInfo"></p>
+  <p>Account: <span id="mainAccount"></span></p>
+  <p>HBAR Balance: <span id="hbarBalance">0</span></p>
+  <p>USDT Equivalent: <span id="usdtBalance">0.00</span></p>
+  <div class="card">
+    <h4>Tokenized Real Asset</h4>
+    <p>Coming Soon...</p>
+  </div>
+  <div class="card">
+    <h4>Transaction History</h4>
+    <div id="txHistory">Loading...</div>
+  </div>
+</div>
+
+  <!-- app script -->
+  <script src="app.js" type="module"></script>
+</body>
+</html>
