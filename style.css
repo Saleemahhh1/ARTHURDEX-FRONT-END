@@ -1,0 +1,48 @@
+:root{
+  --bg1:#060606; --bg2:#111218; --accent:#00ffcc; --muted:#9aa7a6; --card:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;
+  background:linear-gradient(160deg,var(--bg1),var(--bg2));
+  color:#e6fcf5;
+  min-height:100vh;
+}
+.center-screen{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;gap:18px;padding:24px;
+}
+#brand{font-size:44px;margin:0;color:var(--accent);letter-spacing:1px}
+.intro-line{font-size:20px;min-height:36px;color:var(--accent);white-space:pre-wrap;text-align:center;max-width:900px}
+.powered{opacity:0.9;color:var(--muted);font-weight:600}
+.hidden{display:none}
+
+/* panels */
+.panel{max-width:980px;margin:36px auto;background:var(--card);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.panel-header{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,0.02);padding-bottom:12px}
+.panel-header h2{margin:0;color:var(--accent)}
+.muted{color:var(--muted);font-size:0.95rem}
+.balances{display:flex;gap:18px;font-weight:700}
+.panel-body{padding:18px 0}
+.panel-footer{padding-top:12px;color:var(--muted);font-size:0.95rem}
+
+/* buttons */
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start}
+button.cta{background:linear-gradient(90deg,var(--accent),#00cca3);color:#001;border:none;padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+button.cta:hover{transform:translateY(-2px);}
+
+/* flow card */
+.panel-flow{margin-top:12px}
+.card{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;margin-top:12px;text-align:left;color:#e8fff9;border:1px solid rgba(0,255,204,0.04)}
+.card h4{margin:0 0 8px 0}
+.card p{margin:0 0 8px 0;color:var(--muted)}
+.quiz-options{display:flex;flex-direction:column;gap:8px}
+.quiz-options button{background:#0b0e10;color:var(--accent);padding:10px;border-radius:8px;border:1px solid rgba(0,255,204,0.06)}
+.passphrase{font-family:ui-monospace,monospace;background:rgba(0,0,0,0.25);padding:10px;border-radius:8px;color:#dffdf1;word-break:break-word}
+.hint{color:var(--muted);font-size:0.9rem;margin-top:6px}
+
+/* responsive */
+@media (max-width:720px){
+  .panel{margin:12px;padding:12px}
+  .btn-row{flex-direction:column}
+}
